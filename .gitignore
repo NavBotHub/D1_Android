@@ -1,0 +1,30 @@
+build/
+/log/
+/install/
+dist/
+
+# Local IDE and tool state
+/.idea/
+/.vscode/
+/.deploy_cache/
+/tmp/
+
+# Local build logs
+/app/build_*.log
+/app/build_*.err.log
+
+# Unused iconfont generator previews and source metadata
+/app/assets/icons/icon.png
+/app/assets/icons/*/demo.css
+/app/assets/icons/*/demo_index.html
+/app/assets/icons/*/iconfont.css
+/app/assets/icons/*/iconfont.js
+/app/assets/icons/*/iconfont.json
+
+# Legacy files copied from the combined frontend/backend project
+/build.sh
+/doc/
+/app/doc/
+/app/.github/
+/.github/modernize/
+/.github/workflows/ros_humble_build.yaml
