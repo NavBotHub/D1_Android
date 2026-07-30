@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
+import 'package:gamepads/gamepads.dart';
 import 'package:provider/provider.dart';
 import 'package:navbot_d1_flutter/display/tile_map.dart';
 import 'package:navbot_d1_flutter/provider/global_state.dart';
@@ -44,6 +45,7 @@ class _MainFlamePageState extends State<MainFlamePage> {
   bool _sshRailExpanded = false;
   bool _showGamepadOutput = false;
   bool _showGamepadControls = false;
+  bool _gamepadControlsManuallyToggled = false;
   bool _isStanding = false;
   bool _d1ModeCommandPending = false;
   _AssumedD1State _assumedD1State = _AssumedD1State.passive;
@@ -80,6 +82,7 @@ class _MainFlamePageState extends State<MainFlamePage> {
   @override
   void initState() {
     super.initState();
+    unawaited(_initializeGamepadControlsVisibility());
     WidgetsBinding.instance.addPostFrameCallback((_) {
       _recoverConnectionIfNeeded();
     });
@@ -359,7 +362,24 @@ class _MainFlamePageState extends State<MainFlamePage> {
 
   void _toggleGamepadControls() {
     setState(() {
+      _gamepadControlsManuallyToggled = true;
       _showGamepadControls = !_showGamepadControls;
+    });
+  }
+
+  Future<void> _initializeGamepadControlsVisibility() async {
+    var isHandheld = false;
+    try {
+      final controllers = await Gamepads.list();
+      isHandheld = controllers.isNotEmpty;
+      await Future.wait(controllers.map((controller) => controller.dispose()));
+    } catch (_) {
+      // If device detection is unavailable, keep virtual controls accessible.
+    }
+
+    if (!mounted || _gamepadControlsManuallyToggled) return;
+    setState(() {
+      _showGamepadControls = !isHandheld;
     });
   }
 

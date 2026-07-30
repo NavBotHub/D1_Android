@@ -21,6 +21,10 @@ dist/
 /app/assets/icons/*/iconfont.js
 /app/assets/icons/*/iconfont.json
 
+# Generated files accidentally copied into the local Android plugin
+/app/thirdparty/gamepads_android/android/kls_database.db
+/app/thirdparty/gamepads_android/android/app/
+
 # Legacy files copied from the combined frontend/backend project
 /build.sh
 /doc/
