@@ -12,8 +12,8 @@ Companion robot-side deployment: [D1_Backend](https://gitee.com/lookc4/D1_Backen
 
 Recommended versions:
 
-- Flutter `3.29.3`
-- Dart `>=3.7.0 <4.0.0`
+- Flutter `3.44.8`
+- Dart `>=3.12.0 <4.0.0`
 - JDK 17 for Android builds
 
 Check the environment and fetch dependencies:

@@ -1,7 +1,7 @@
 # Navbot Robot Flutter Client
 
-![Flutter](https://img.shields.io/badge/Flutter-3.29.3-02569B?logo=flutter&logoColor=white)
-![Dart](https://img.shields.io/badge/Dart-3.7-0175C2?logo=dart&logoColor=white)
+![Flutter](https://img.shields.io/badge/Flutter-3.44.8-02569B?logo=flutter&logoColor=white)
+![Dart](https://img.shields.io/badge/Dart-3.12-0175C2?logo=dart&logoColor=white)
 ![Android](https://img.shields.io/badge/Android-supported-3DDC84?logo=android&logoColor=white)
 ![Web](https://img.shields.io/badge/Web-supported-4285F4?logo=googlechrome&logoColor=white)
 ![D1](https://img.shields.io/badge/D1-external%20service-0078D4)
@@ -87,8 +87,8 @@ The frontend never configures CAN, starts robot services, or substitutes for a h
 
 ## 4. Requirements and Endpoints
 
-- Flutter `3.29.3`
-- Dart `>=3.7.0 <4.0.0`
+- Flutter `3.44.8`
+- Dart `>=3.12.0 <4.0.0`
 - A reachable robot control service, normally `http://<robot-ip>:8081`
 - A reachable MJPEG stream on port `8080` when camera display is used
 

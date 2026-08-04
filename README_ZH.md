@@ -1,7 +1,7 @@
 # Navbot Robot Flutter 客户端
 
-![Flutter](https://img.shields.io/badge/Flutter-3.29.3-02569B?logo=flutter&logoColor=white)
-![Dart](https://img.shields.io/badge/Dart-3.7-0175C2?logo=dart&logoColor=white)
+![Flutter](https://img.shields.io/badge/Flutter-3.44.8-02569B?logo=flutter&logoColor=white)
+![Dart](https://img.shields.io/badge/Dart-3.12-0175C2?logo=dart&logoColor=white)
 ![Android](https://img.shields.io/badge/Android-supported-3DDC84?logo=android&logoColor=white)
 ![Web](https://img.shields.io/badge/Web-supported-4285F4?logo=googlechrome&logoColor=white)
 ![D1](https://img.shields.io/badge/D1-external%20service-0078D4)
@@ -75,8 +75,8 @@ Android / Web / Desktop Flutter 客户端
 
 ## 4. 环境与接口
 
-- Flutter `3.29.3`
-- Dart `>=3.7.0 <4.0.0`
+- Flutter `3.44.8`
+- Dart `>=3.12.0 <4.0.0`
 - 可访问的机器人控制服务，默认地址为 `http://<机器人IP>:8081`
 - 使用相机时需要可访问的 MJPEG 地址，默认端口为 `8080`
 
